@@ -1,0 +1,102 @@
+﻿body {
+    width: 99vw;
+}
+
+#page {
+    margin-left:0.5vw;
+    margin-top:1vh;
+    border: 1px solid silver;
+    height: 95%;
+    width: 97.5%;
+    padding: 1vh;
+    text-align:center;
+}
+#header {
+    background-color: lightblue;
+    text-align: center;
+    font-size: 5vh;
+    width: 99vw;
+}
+#menu {
+    position: absolute;
+    top: 8vh;
+    background-color: lightblue;
+    background-image: linear-gradient(lightblue, darkblue);
+    border-radius: 10px;
+    width: 10vw;
+    height: 83vh;
+    text-align: center;
+    padding-top: 2vh;
+}
+#content {
+    position: absolute;
+    top: 8vh;
+    left: 11vw;
+    width: 88vw;
+    height: 85vh;
+    display: inline;
+    border-radius: 10px;
+    border: 0.1vh solid lightblue;
+}
+
+#footer {
+    position: absolute;
+    top: 95vh;
+    width: 99vw;
+    height:3vh;
+    text-align: center;
+    background-color: darkblue;
+    font-size: 2vh;
+    color:aliceblue;
+}
+
+.button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-bottom: 1vh;
+    padding: 0.5vh;
+    width: 8vw;
+}
+
+#loginbox {
+    margin-top: 15%;
+    margin-left: 33%;
+    background-color: lightblue;
+    background-image: linear-gradient(lightblue, darkblue);
+    border-radius: 10px;
+    width: 20vw;
+    height: 20vh;
+    text-align:center;
+    padding-top:2vh;
+}
+
+#subtitle {
+    margin-left:1vw;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    width: 18vw;
+    height: auto;
+    font-size:2.5vh;
+    margin-bottom:1vh;
+}
+
+#inputbox {
+    margin-left: 1vw;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    width: 18vw;
+    height: auto;
+    font-size: 2.5vh;
+    margin-bottom: 1vh;
+}
+
+.loginfield {
+    margin-left: 1vw;
+    background-color: white;
+    border-radius: 10px;
+    width: 10vw;
+    height: auto;
+    font-size: 1.5vh;
+    margin-bottom: 1vh;
+}

@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="part2.Pages.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="../CSS/StyleSheet1.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="header">
+            ASP / XML Valgfag
+        </div>
+        <div id="menu">
+
+            <asp:Button class="button" ID="Button1" runat="server" Text="Employee Search" PostBackUrl="EmployeeSearch.aspx"/><br>
+            <asp:Button class="button" ID="Button2" runat="server" Text="Modify Product" PostBackUrl="ModifyProduct.aspx"/><br>
+            <asp:Button class="button" ID="Button3" runat="server" Text="Product View" PostBackUrl="productView.aspx"/><br>
+            <asp:Button class="button" ID="Button4" runat="server" Text="XML Datafile" PostBackUrl="XMLDatafile.aspx"/><br>
+            <asp:Button class="button" ID="Button5" runat="server" Text="Customized XML" PostBackUrl="CustomizedXMLDatafile.aspx"/><br>
+            <asp:Button class="button" ID="Button6" runat="server" Text="Log Out" PostBackUrl="../index.aspx"/><br>
+
+        </div>
+        <div id="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="footer">
+            Af Ian fanefjord & Mathias Faust
+        </div>
+    </form>
+</body>
+</html>
