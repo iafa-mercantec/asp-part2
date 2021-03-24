@@ -5,7 +5,6 @@
 #page {
     margin-left:0.5vw;
     margin-top:1vh;
-    border: 1px solid silver;
     height: 95%;
     width: 97.5%;
     padding: 1vh;
@@ -57,6 +56,7 @@
     margin-bottom: 1vh;
     padding: 0.5vh;
     width: 8vw;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 #loginbox {
@@ -66,9 +66,9 @@
     background-image: linear-gradient(lightblue, darkblue);
     border-radius: 10px;
     width: 20vw;
-    height: 20vh;
-    text-align:center;
-    padding-top:2vh;
+    height: 18vh;
+    text-align: center;
+    padding-top: 2vh;
 }
 
 #subtitle {
@@ -87,16 +87,18 @@
     border-radius: 10px;
     width: 18vw;
     height: auto;
-    font-size: 2.5vh;
+    font-size: 1.5vh;
     margin-bottom: 1vh;
+    padding-top:5vh;
 }
 
 .loginfield {
     margin-left: 1vw;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 10vw;
     height: auto;
     font-size: 1.5vh;
     margin-bottom: 1vh;
+    padding-left:0.5vw;
 }
