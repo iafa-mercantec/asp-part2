@@ -23,6 +23,7 @@ namespace part2.Pages
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("select * from Product", conn);
+
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
@@ -31,8 +32,7 @@ namespace part2.Pages
                         var row=(IDataRecord)reader;
                         var product = row["Product"].ToString();
                         var description = row["Description"].ToString();
-                        Response.Write("<script>alert('" + product + " - "+description+"');</script>");
-                        /*
+                        
                         try
                         {
                             products[product].Add(description);
@@ -42,38 +42,21 @@ namespace part2.Pages
                         {
                             products.Add(product, new List<string>());
                             products[product].Add(description);
+                            if (!DropDownList1.Items.Contains(new ListItem(product)))
+                                DropDownList1.Items.Add(product);
                         }
-                        
-                        DropDownList1.Items.Add(new ListItem (col["Product"].ToString()));
-                        */
-                        //Response.Write("<script>alert('" + col["Product"] + "');</script>");
                     }
-                    /*
+
+                    
                     string productSelection = "Problems";
-                    foreach (KeyValuePair<string, List<string>> elements in products)
+                    
+                    foreach (var text in products[productSelection])
                     {
-                        if (elements.Key == productSelection)
-                        {
-                            foreach (var text in elements.Value)
-                            {
-                                //Response.Write("<script>alert('" + text + "');</script>");
-                            }
-                        }
-                            
+                        ListBox1.Items.Add(text);
                     }
-                    */
-                    /*
-                    products[productSelection].ForEach(delegate (String text)
-                    {
-                        Response.Write("<script>alert('" + text + "');</script>");
-                    });
-                    */
-                    /*
-                    foreach (KeyValue<string, List<string>> elements in products[productSelection])
-                    {
-                        Response.Write("<script>alert('" + elements.Key +"-"+ elements.Value + "');</script>");
-                    }
-                    */
+
+                    //Response.Write("<script>alert('" + elements.Key +"-"+ elements.Value + "');</script>");
+
                 }
             }
             catch (Exception er)
@@ -81,6 +64,18 @@ namespace part2.Pages
                 Response.Write("<script>alert('connection failed'+'" + er + "');</script>");
             }
             finally { conn.Close(); }
+            
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string productSelection = DropDownList1.SelectedItem.Value;
+            //Response.Write("<script>alert('" + sender.GetType().ToString() + "');</script>");
+            ListBox1.Items.Clear();
+            foreach (var text in products[productSelection])
+            {
+                ListBox1.Items.Add(text);
+            }
             
         }
     }
