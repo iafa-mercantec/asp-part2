@@ -15,9 +15,7 @@ namespace part2
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegiConnectionString"].ConnectionString);
 
         protected void Page_Load(object sender, EventArgs e)
-        {
-            //SqlConnection con = new SqlConnection(conStr);
-            
+        {            
             try
             {
                 conn.Open();
@@ -27,7 +25,6 @@ namespace part2
                 Response.Write("<script>alert('connection failed'+'"+er+"');</script>");
             }
             finally { conn.Close();}
-            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -36,9 +33,6 @@ namespace part2
             string userid = TextBox1.Text;
             string password = TextBox2.Text;
             SqlCommand cmd = new SqlCommand("select FirstName,Password from Customer where FirstName='" + TextBox1.Text + "'and password='" + TextBox2.Text + "'", conn);
-            //SqlDataAdapter da = new SqlDataAdapter(cmd);
-            //DataTable dt = new DataTable();
-            //da.Fill(dt);
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read()) // using (SqlDataReader reader = cmd.ExecuteReader())
             {
